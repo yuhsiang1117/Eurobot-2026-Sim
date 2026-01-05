@@ -14,7 +14,6 @@ def generate_launch_description():
     # Path settings
 
     # Declared the world path
-    # Ref: https://github.com/ROBOTIS-GIT/turtlebot3_simulations/tree/98a27b20952b11047f454d7ec751f8c742862713/turtlebot3_gazebo/worlds/turtlebot3_world.world
     world_path = PathJoinSubstitution([
         FindPackageShare("sim_desp"), 
         "worlds", "Eurobot2026.world"
