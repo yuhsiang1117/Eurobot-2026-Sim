@@ -18,8 +18,12 @@ colcon build
 source install/setup.bash
 ```
 ### Run simulation
-Before the simulation, make sure that you have import your robot stl file under ```src/EurobotField_Sim/sim_desp/models/my_robot/meshes/``` and change the file name in ```src/EurobotField_Sim/sim_desp/models/my_robot/model.sdf``` to fit your robot model file.
-Then, recompile the workspace and run:
+Before the simulation, please make sure that you have import your robot stl file under ```src/EurobotField_Sim/sim_desp/models/my_robot/meshes/``` and change the file name in ```src/EurobotField_Sim/sim_desp/models/my_robot/model.sdf``` to fit your robot model file.
+Then, rebuild the workspace and run:
 ```bash
 ros2 launch sim_gazebo sim_gazebo.launch.py 
+```
+If you don't see models in gazebo, please run the following command and launch the node again:
+```bash
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/sim_ws/install/sim_desp/share/sim_desp/models
 ```
