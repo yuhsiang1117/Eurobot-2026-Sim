@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+    <model name="robot">
+        <static>1</static>
+        <pose>1.5 1 0 1.5708 0 0</pose>
+        <link name="map">
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://my_robot/meshes/Eurobot2025_robot.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://my_robot/meshes/Eurobot2025_robot.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

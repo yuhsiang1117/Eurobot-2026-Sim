@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="field_image">
+    <static>true</static>
+    <pose>1.5 1 0.0001 0 0 0</pose>
+    <link name="link">
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows> <geometry>
+          <plane>
+            <normal>0 0 1</normal>  
+            <size>3.0 2.0</size>    
+        </plane>
+        </geometry>
+        
+        <material>
+          <script>
+            <uri>model://field_image/materials/scripts</uri>
+            <uri>model://field_image/materials/textures</uri>
+            <name>Eurobot/ImageParams</name> 
+        </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

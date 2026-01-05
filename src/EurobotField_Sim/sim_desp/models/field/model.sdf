@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+    <model name="field">
+        <static>1</static>
+        <pose>0 0 -0.017 1.5708 0 -1.5708</pose>
+        <link name="map">
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://field/meshes/Eurobot2026_field.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://field/meshes/Eurobot2026_field.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

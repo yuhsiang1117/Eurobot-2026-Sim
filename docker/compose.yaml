@@ -1,0 +1,27 @@
+services:
+  sim-ws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_UID: ${USER_UID:-1000}
+    image: eurobot-2026-sim:latest
+    container_name: sim-ws
+    stdin_open: true
+    tty: true
+    privileged: true
+    network_mode: host
+    command: ["/bin/bash"]
+    working_dir: /home/user/sim_ws
+    runtime: nvidia
+    shm_size: 8g
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - DISPLAY=${DISPLAY}
+      - ROS_LOCALHOST_ONLY=0
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - ROS_WORKSPACE=/home/user/sim_ws
+    volumes:
+      - /dev:/dev
+      - ../:/home/user/sim_ws
